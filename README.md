@@ -7,27 +7,27 @@ Generates all possible permutations of a JSON object using a schema definition g
 
 Install permutator globally:
 
-> npm install -g permutator
+  npm install -g permutator
 
 Create a schema.json file:
 
-> {
->   "type" : "object",
->   "schemas" : {
->     "value1" : {
->       "type" : "value",
->       "values" : [1, 2, 3]
->     },
->     "value2" : {
->       "type" : "value",
->       "values" : ["a", "b", "c"]
->     }
->   }
-> }
+  {
+    "type" : "object",
+    "schemas" : {
+    "value1" : {
+      "type" : "value",
+      "values" : [1, 2, 3]
+    },
+    "value2" : {
+        "type" : "value",
+        "values" : ["a", "b", "c"]
+      }
+    }
+  }
 
 Run permutator
 
-> permutator schema.json
+  permutator schema.json
 
 We have just created all possible permutations for an object defined in the schema!
 
