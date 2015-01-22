@@ -2,7 +2,7 @@
   "name": "permutator",
   "version": "0.0.1",
   "description": "JSON permutations generator",
-  "keywords" : ["json", "permutations", "generator", "data"],
+  "keywords" : ["json", "permutations", "permutations generator", "data generator", "test generator"],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
