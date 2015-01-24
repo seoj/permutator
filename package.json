@@ -1,6 +1,6 @@
 {
   "name": "permutator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JSON permutations generator",
   "keywords" : ["json", "permutations", "permutations generator", "data generator", "test generator"],
   "main": "index.js",
