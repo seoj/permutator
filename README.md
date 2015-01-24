@@ -130,15 +130,15 @@ Returns a generator which has a .generate(handler) function. The handler is a ca
 
 #### Example
 
-        var permutator = require('permutator');
-        var createGenerator = permutator.createGenerator;
-        
-        createGenerator({
-        	"type" : "value",
-        	"values" : [1, 2, 3]
-        }).generate(function(data) {
-        	console.log(data);  // print each generated data
-        });
+    var permutator = require('permutator');
+    var createGenerator = permutator.createGenerator;
+    
+    createGenerator({
+    	"type" : "value",
+    	"values" : [1, 2, 3]
+    }).generate(function(data) {
+    	console.log(data);  // print each generated data
+    });
 
 ### generate(schema, handler)
 
@@ -150,18 +150,18 @@ A constructor for a generator for simple values. The constructor takes in a sing
 
 #### Example
 
-        var permutator = require('permutator');
-        var ValueGenerator = permutator.ValueGenerator;
-        
-        var g = new ValueGenerator([1, 2, 3]);
-        g.generate(function(data) {
-            console.log(data);
-        });
-        // this will print
-        // 1
-        // 2
-        // 3
-        // to the console
+    var permutator = require('permutator');
+    var ValueGenerator = permutator.ValueGenerator;
+    
+    var g = new ValueGenerator([1, 2, 3]);
+    g.generate(function(data) {
+        console.log(data);
+    });
+    // this will print
+    // 1
+    // 2
+    // 3
+    // to the console
 
 ### ObjectGenerator(schemas)
 
@@ -169,23 +169,23 @@ A constructor for a generator for json objects. The 'schemas' is a mapping of pr
 
 #### Example
 
-        var permutator = require('permutator');
-        var ObjectGenerator = permutator.ObjectGenerator;
-        var ValueGenerator = permutator.ValueGenerator;
-        
-        var g = new ObjectGenerator({
-            'prop1' : new ValueGenerator([1, 2]),
-            'prop2' : new ValueGenerator([true, false])
-        });
-        g.generate(function(data) {
-            console.log(data);
-        });
-        // this will print
-        // {"prop1":1,"prop2":true}
-        // {"prop1":1,"prop2":false}
-        // {"prop1":2,"prop2":true}
-        // {"prop1":2,"prop2":false}
-        // to the console
+    var permutator = require('permutator');
+    var ObjectGenerator = permutator.ObjectGenerator;
+    var ValueGenerator = permutator.ValueGenerator;
+    
+    var g = new ObjectGenerator({
+        'prop1' : new ValueGenerator([1, 2]),
+        'prop2' : new ValueGenerator([true, false])
+    });
+    g.generate(function(data) {
+        console.log(data);
+    });
+    // this will print
+    // {"prop1":1,"prop2":true}
+    // {"prop1":1,"prop2":false}
+    // {"prop1":2,"prop2":true}
+    // {"prop1":2,"prop2":false}
+    // to the console
 
 ### ArrayGenerator(minSize, maxSize, generator)
 
@@ -196,21 +196,21 @@ A constructor for a generator for arrays.
 
 #### Example
 
-        var permutator = require('permutator');
-        var ValueGenerator = permutator.ValueGenerator;
-        var ArrayGenerator = permutator.ArrayGenerator;
-        
-        var g = new ArrayGenerator(1, 2, new ValueGenerator([true, false]));
-        g.generate(function(data) {
-            console.log(data);
-        });
-        // thsi will print
-        // [ true ]
-        // [ false ]
-        // [ true, true ]
-        // [ true, false ]
-        // [ false, true ]
-        // [ false, false ]
-        // to the console
+    var permutator = require('permutator');
+    var ValueGenerator = permutator.ValueGenerator;
+    var ArrayGenerator = permutator.ArrayGenerator;
+    
+    var g = new ArrayGenerator(1, 2, new ValueGenerator([true, false]));
+    g.generate(function(data) {
+        console.log(data);
+    });
+    // thsi will print
+    // [ true ]
+    // [ false ]
+    // [ true, true ]
+    // [ true, false ]
+    // [ false, true ]
+    // [ false, false ]
+    // to the console
 
 Of course, you are always welcome to open up the source code to see more comments and how things work internally.
